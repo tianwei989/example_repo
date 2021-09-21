@@ -16,7 +16,7 @@ length(samp)
 
 # Section 2
 
-I can take the mean of the sample, too! The mean is -0.0417827.
+I can take the mean of the sample, too! The mean is 0.0778556.
 
 \#section 3 \#Let’s write a new ode chunk.
 \#{r,collapse=TRUE,warning=FALSE.echo=TRUE,
