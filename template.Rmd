@@ -1,0 +1,46 @@
+---
+title: "Simple document"
+output: github_document
+---
+
+I'm an R Markdown document! 
+
+# Section 1
+
+Here's a **code chunk** that samples from 
+a _normal distribution_:
+
+```{r}
+samp = rnorm(100)
+length(samp)
+```
+
+# Section 2
+
+I can take the mean of the sample, too!
+The mean is `r mean(samp)`.
+
+#section 3
+#Let's write a new ode chunk.
+#{r,collapse=TRUE,warning=FALSE.echo=TRUE,        
+
+```{r}
+library(tidyverse)
+example_df = tibble(
+  vec_numeric = 5:8,
+  vec_char = c("My", "name", "is", "Jeff"),
+  vec_logical = c(TRUE, TRUE, TRUE, FALSE),
+  vec_factor = factor(c("male", "male", "female", "female"))
+)
+set.seed(1)
+plot_df = tibble(
+  x = rnorm(1000, sd = .5),
+  y = 1 + 2 * x + rnorm(1000)
+)
+
+ggplot(plot_df, aes(x = x)) + geom_histogram()
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+
+
